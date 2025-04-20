@@ -23,9 +23,13 @@ Trajectory optimization works by mathematically formulating the problem of trave
   * On Ubuntu 24.04 or greater, install GCC 14 via `sudo apt install g++-14`
   * On macOS 14 or greater, install the Xcode 15.3 command-line build tools via `xcode-select --install`
 * [CMake](https://cmake.org/download/) 3.21 or greater
-  * On Windows, install from the link above
+  * On Windows, install from the link above and add the executable to PATH
   * On Linux, install via `sudo apt install cmake`
   * On macOS, install via `brew install cmake`
+* [Ninja](https://github.com/ninja-build/ninja/releases)
+  * On Windows, install from the link above and add the executable to PATH
+  * On Linux, install via `sudo apt install ninja-build`
+  * On macOS, install via `brew install ninja`
 * [Rust](https://www.rust-lang.org/) compiler
 * [Sleipnir](https://github.com/SleipnirGroup/Sleipnir)
 * [Catch2](https://github.com/catchorg/Catch2) (tests only)
@@ -41,8 +45,8 @@ On Windows, open a [Developer PowerShell](https://learn.microsoft.com/en-us/visu
 git clone git@github.com:SleipnirGroup/TrajoptLib
 cd TrajoptLib
 
-# Configure
-cmake -B build -S .
+# Configure (uses Ninja and sets the build folder to "build")
+cmake --preset default
 
 # Build
 cmake --build build

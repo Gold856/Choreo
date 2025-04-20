@@ -11,7 +11,7 @@ fn main() {
 
     if cfg!(target_os = "windows") {
         cmake_config
-            .generator("Visual Studio 17 2022")
+            .generator("Ninja")
             .cxxflag("/EHsc");
     }
 
