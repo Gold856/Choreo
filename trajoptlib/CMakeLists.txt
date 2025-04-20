@@ -72,6 +72,7 @@ list(FILTER TrajoptLib_src EXCLUDE REGEX rust_ffi.cpp)
 add_library(TrajoptLib ${TrajoptLib_src})
 compiler_flags(TrajoptLib)
 target_include_directories(TrajoptLib PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src)
+set(CMAKE_MSVC_DEBUG_INFORMATION_FORMAT Embedded)
 
 set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
 
